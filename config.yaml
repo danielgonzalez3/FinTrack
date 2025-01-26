@@ -1,0 +1,147 @@
+categories:
+  coffee:
+    matches:
+      - "STARBUCKS"
+      - "COFFEE BEAN"
+      - "DUTCH BROS"
+      - "RED BEE COFFEE"
+      - "DELTINA COFFEE"
+      - "BANNER COFFEE"
+      - "CAFE ANDREINI"
+
+  dining:
+    matches:
+      - "IN-N-OUT"
+      - "CHICK-FIL-A"
+      - "CHIPOTLE"
+      - "WINGSTOP"
+      - "TACO BELL"
+      - "PANDA EXPRESS"
+      - "TRADER JOE"
+      - "CALIFORNIA FRESH"
+      - "RAISING CANE"
+      - "PIZZA"
+      - "TAQUERIA"
+      - "BURGER"
+      - "RESTAURANT"
+      - "CASA OAXACA"
+      - "FOOD"
+      - "BAKERY"
+      - "GIUSEPPES"
+      - "SIDEWALK CAFE"
+      - "BEACH PIZZA"
+      - "POKE"
+      - "UMAMI"
+      - "TST*"
+      - "SUSHI"
+      - "AMEX CAFE"
+      - "ZORROS"
+      - "7-ELEVEN"
+
+  transportation:
+    matches:
+      - "AIRPORT"
+      - "TESLA SUPERCHARGER"
+      - "CHEVRON"
+      - "SHELL"
+      - "GAS"
+      - "PARKING"
+      - "FASTRAK"
+      - "LIME*RIDE"
+      - "FLYING J"
+
+  shopping:
+    matches:
+      - "AMAZON"
+      - "AMZN"
+      - "TARGET"
+      - "WAL-MART"
+      - "BEST BUY"
+      - "APPLE"
+      - "NIKE"
+      - "H&M"
+      - "COSTCO"
+      - "BIG 5"
+      - "MARKET"
+      - "SPROUTS"
+
+  entertainment:
+    matches:
+      - "SPOTIFY"
+      - "NETFLIX"
+      - "PEACOCK"
+      - "PRIME VIDEO"
+      - "PLAYSTATION"
+      - "AMC"
+      - "FANDANGO"
+      - "DISNEY"
+      - "HBO"
+      - "APPLE.COM/BILL"
+
+  travel:
+    matches:
+      - "AIRBNB"
+      - "HOTEL"
+      - "AIRLINE"
+      - "FLIGHT"
+      - "AMERICAN AIRLINES"
+      - "UNITED"
+      - "DELTA"
+      - "TSA"
+
+  utilities:
+    matches:
+      - "INTERNET"
+      - "PHONE"
+      - "MOBILE"
+      - "ELECTRIC"
+      - "GAS"
+      - "WATER"
+      - "WASTE"
+      - "SPECTRUM"
+      - "AT&T"
+      - "VERIZON"
+
+  health_fitness:
+    matches:
+      - "GYM"
+      - "FITNESS"
+      - "SPORT CLIPS"
+      - "MASSAGE"
+      - "MEDICAL"
+      - "PHARMACY"
+      - "RITE AID"
+      - "CVS"
+      - "WORKOUT"
+      - "CALFIT"
+      - "PWRBLD"
+
+  financial:
+    matches:
+      - "CAPITAL ONE"
+      - "BANK OF AMERICA"
+      - "CHASE"
+      - "VENMO"
+      - "PAYPAL"
+      - "ZELLE"
+      - "COINBASE"
+      - "TRANSFER"
+      - "FEE"
+      - "MAINTENANCE FEE"
+      - "MONEY METALS"
+      - "INSURANCE"
+
+  subscriptions:
+    matches:
+      - "SUBSCRIPTION"
+      - "MONTHLY"
+      - "RECURRING"
+      - "GOOGLE ONE"
+      - "LINKEDIN"
+      - "OPENAI"
+      - "ANTHROPIC"
+      - "CLAUDE.AI"
+
+  uncategorized:
+    matches:
+      - "*"
