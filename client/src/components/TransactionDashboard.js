@@ -5,7 +5,7 @@ import { AlertCircle } from 'lucide-react';
 import dayjs from 'dayjs';
 import './TransactionDashboard.css';
 
-const API_BASE_URL = 'http://127.0.0.1:5000';
+const API_BASE_URL = 'http://127.0.0.1:5005';
 
 const fetchTransactions = async () => {
   try {

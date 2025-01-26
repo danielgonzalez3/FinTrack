@@ -50,14 +50,25 @@ CREATE TABLE `transactions` (
   `account_id` varchar(100) DEFAULT NULL,
   `account_name` varchar(255) DEFAULT NULL,
   `currency` varchar(10) DEFAULT NULL,
-  `posted` int unsigned DEFAULT NULL,
   `amount` decimal(15,2) DEFAULT '0.00',
   `description` varchar(255) DEFAULT NULL,
   `payee` varchar(255) DEFAULT NULL,
   `memo` varchar(255) DEFAULT NULL,
-  `transacted_at` int unsigned DEFAULT NULL,
+  `category` varchar(50) DEFAULT 'uncategorized',
+  `posted` datetime DEFAULT NULL,
+  `transacted_at` datetime DEFAULT NULL,
   PRIMARY KEY (`transaction_id`)
 )
+
+CREATE VIEW income AS
+SELECT * FROM transactions
+WHERE amount > 0;
+
+CREATE VIEW expenses AS
+SELECT * FROM transactions
+WHERE amount < 0;
+
+CREATE INDEX idx_transactions_category ON transactions(category);
 ```
 
 
