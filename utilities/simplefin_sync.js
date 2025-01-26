@@ -2,7 +2,7 @@ require('dotenv').config();
 const axios = require('axios');
 const dayjs = require('dayjs');
 const knex = require('../config/db');
-const { categorizeTransaction, loadConfig } = require('./transaction-categorizer');
+const { categorizeTransaction, loadConfig } = require('./transaction_categorizer');
 
 let config = null;
 
@@ -96,11 +96,14 @@ class SimpleFinSync {
     }
   }
 
-  async sync30Days() {
+  async syncDays(numerOfDays = null) {
     try {
+      const cfg = await initConfig();
+      const daysToSync = numerOfDays || cfg.syncDays || 30;
+      console.log(`Starting database upsert for number ${daysToSync} of days`);
       const endDate = new Date();
       const startDate = new Date();
-      startDate.setDate(startDate.getDate() - 300);
+      startDate.setDate(startDate.getDate() - daysToSync);
       console.log(`Fetching transactions from ${startDate} to ${endDate}`);
       const simpleFinData = await this.fetchTransactions(startDate, endDate);
       const transformedTransactions = [];
@@ -128,7 +131,7 @@ class SimpleFinSync {
         console.log('No transactions found for the period');
       }
     } catch (error) {
-      console.error('Error in sync30Days:', error);
+      console.error('Error in syncDays:', error);
       throw error;
     }
   }
@@ -136,7 +139,8 @@ class SimpleFinSync {
   static async runSync() {
     const sync = new SimpleFinSync();
     try {
-      await sync.sync30Days();
+      const days = parseInt(process.argv[2]) || undefined;
+      await sync.syncDays(days);
       console.log('Sync completed successfully');
       process.exit(0);
     } catch (error) {

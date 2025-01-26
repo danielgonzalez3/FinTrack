@@ -1,3 +1,4 @@
+syncDays: 30
 categories:
   coffee:
     matches:
